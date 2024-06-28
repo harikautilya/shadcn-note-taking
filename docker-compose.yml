@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  notes:
+    build:
+      dockerfile: ./DockerFile
+    container_name: notes
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/workspace/
+    ports:
+      - 3009:3000
